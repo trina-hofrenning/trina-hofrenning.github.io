@@ -1,0 +1,53 @@
+---
+title: "Untitled"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+
+data("nyc_airbnb")
+
+nyc_airbnb <-
+  nyc_airbnb %>%
+  mutate(stars = review_scores_location/2) %>%
+  select(borough = neighbourhood_group,
+         neighbourhood, stars, price, room_type, lat, long) %>%
+  drop_na(stars) %>%
+  filter(borough == "Manhattan",
+         room_type == "Entire home/apt",
+         price %in% 100:500)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+need to update knitr package?
+
+```{r}
+nyc_airbnb %>%
+  plot_ly(y = ~price, color = ~neighbourhood, type = "box")
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+
+```
+
+### Chart C
+
+```{r}
+
+```
+
