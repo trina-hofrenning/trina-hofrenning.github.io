@@ -17,3 +17,7 @@ Here is an image: ![](link)
 
 Here's a link to the [about](about.html) page.
 
+# Other Stuff on this Page
+
+[plotly](plotly.html)
+
