@@ -1,23 +1,20 @@
 ---
-title: "My awesome website"
+title: "Trina Hofrenning"
 output: 
   html_document:
     toc: true
     toc_float: true
 ---
 
-# This is Trina's awesome website
+# Welcome to my Website
 
-![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
+![](images/headshot_thda_copy.JPG)
 
+Here's a link to my [about](about.html) page.
 
-This is a [link](https://www.google.com) to a good data science tool! You can also link to other pages on your website.
-
-Here is an image: ![](link)
-
-Here's a link to the [about](about.html) page.
-
-# Other Stuff on this Page
+# Some links:
 
 [plotly](plotly.html)
+
+[dashboard](dashboard.html)
 

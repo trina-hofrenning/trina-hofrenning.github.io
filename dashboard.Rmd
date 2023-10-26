@@ -1,5 +1,5 @@
 ---
-title: "Untitled"
+title: "Dashboard"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -8,46 +8,41 @@ output:
 
 ```{r setup, include=FALSE}
 library(flexdashboard)
+library(plotly)
 library(tidyverse)
 library(p8105.datasets)
 
-data("nyc_airbnb")
+data("instacart")
 
-nyc_airbnb <-
-  nyc_airbnb %>%
-  mutate(stars = review_scores_location/2) %>%
-  select(borough = neighbourhood_group,
-         neighbourhood, stars, price, room_type, lat, long) %>%
-  drop_na(stars) %>%
-  filter(borough == "Manhattan",
-         room_type == "Entire home/apt",
-         price %in% 100:500)
+instacart <-
+  instacart %>%
+  sample_n(600)
 ```
 
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A
-
-need to update knitr package?
+### Department and Order Hour of Day
 
 ```{r}
-nyc_airbnb %>%
-  plot_ly(y = ~price, color = ~neighbourhood, type = "box")
+instacart %>%
+  plot_ly(x = ~order_hour_of_day, y = ~department, type = "box")
 ```
 
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### Reordered Items and the Days Since Prior Order
 
 ```{r}
-
+instacart %>%
+  filter(reordered == 1) %>%
+  plot_ly(x = ~days_since_prior_order, type = "histogram")
 ```
 
-### Chart C
+### Days Since Prior Order and Order Hour of Day
 
 ```{r}
-
+plot_ly(data=instacart, x=~days_since_prior_order, y = ~order_hour_of_day, color = ~department)
 ```
 
