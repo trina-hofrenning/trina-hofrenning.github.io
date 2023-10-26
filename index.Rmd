@@ -8,6 +8,8 @@ output:
 
 # Welcome to my Website
 
+
+
 ![](images/headshot_thda_copy.JPG)
 
 Here's a link to my [about](about.html) page.

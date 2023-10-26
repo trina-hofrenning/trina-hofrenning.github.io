@@ -13,6 +13,8 @@ navbar:
       href: mailto:<eih2108@cumc.columbia.edu>
     - icon: fa-github fa-lg
       href: http://github.com/<trina-hofrenning>/
+    - icon: fa-linkedin
+      href: https://www.linkedin.com/in/ekaterina-hofrenning-b211b3168/
 output:
   html_document:
     theme: cerulean
