@@ -3,4 +3,9 @@ title: "About"
 output: html_document
 ---
 
-I am a M.S. student at Columbia University studying Biostatistics (Public Health Data Science). Prior to this, I lived in Minneapolis, MN for two years working as a Statistical Programmer at the Mayo Clinic after college. I received my B.A. in Economics and Mathematics (Applied Mathematics and Statistics) from Macalester College in 2021. At Macalester, I worked as a supplemental instructor in the Economics department and as a Machine Learning teaching assistant in the Math department. I continue to work remotely in my position at Mayo supporting the Mayo Clinic Study of Aging and various researchers on neuroimaging, plasma, genetics, and women's health studies.
+I am a M.S. student at Columbia University studying Biostatistics (Public Health Data Science). Prior to this, I lived in Minneapolis, MN for two years working as a Statistical Programmer at the Mayo Clinic after college. I received my B.A. in Economics and Mathematics (Applied Mathematics and Statistics) from Macalester College in 2021. At Macalester, I worked as a supplemental instructor in the Economics department and as a Machine Learning teaching assistant in the Math department. Now, I'm continuing to work remotely in my position at Mayo supporting the Mayo Clinic Study of Aging and various researchers on neuroimaging, plasma, genetics, and women's health studies.
+
+```{r, echo = FALSE}
+knitr::include_graphics("docs/Ekaterina Hofrenning CV 2023.pdf")
+```
+
